@@ -43,20 +43,64 @@ header {
 
 #top {
     display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.mizuhiki {
+    position: relative;
+    height: 100%;
+    left: 10%;
+}
+.mizuhiki div {
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mizuhiki span {
+    display: block;
+    height: 100%;
+    width: 3px;
+    background-color: #cc0000;
+    position: relative;
+    left: 6px;
+}
+
+.mizuhiki span::before,
+.mizuhiki span::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 3px;
+    background-color: #cc0000;
+    position: absolute;
+}
+
+.mizuhiki span::before {
+    left: -6px;
+}
+
+.mizuhiki span::after {
+    left: 6px;
 }
 
 .flower {
     width: 200px;
-    padding-top: 295px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* padding-top: 295px;
     padding-left: 140px;
-    padding-bottom: 376px;
+    padding-bottom: 376px; */
 }
 
 .catch {
     font-size: 50px;
     letter-spacing: 0.05em;
-    padding-top: 380px;
-    padding-left: 133px;
+    padding-left: 10%;
     /* padding: 380px 317px 380px 473px; */
 }
 
