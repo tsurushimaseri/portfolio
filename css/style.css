@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+body {
+    background-color: #fffaf0;
+}
+
+
+/* ヘッダー */
+
+header {
+    position: relative;
+}
+
+.header_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4% 7% 4% 3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pc_nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+.pc_nav ul li {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* トップ */
+
+#top {
+    display: flex;
+}
+
+.flower {
+    width: 200px;
+    padding-top: 295px;
+    padding-left: 140px;
+    padding-bottom: 376px;
+}
+
+.catch {
+    font-size: 50px;
+    letter-spacing: 0.05em;
+    padding-top: 380px;
+    padding-left: 133px;
+    /* padding: 380px 317px 380px 473px; */
+}
+
+
+/* 制作事例 */
+
+#works {
+    background-color: #fff8e8;
+    height: 718px;
+}
+
+h1 {
+    writing-mode: vertical-rl;
+    color: #cc0000;
+    font-size: 30px;
+    margin-left: 227px;
+    padding-top: 103px;
+}
+
+.works_group {
+    display: flex;
+}
+
+.works_item {
+    /* width: 20%; */
+    box-sizing: border-box;
+}
+
+.button {
+    width: 200px;
+    height: 42px;
+    background-color: #e24242;
+    border-radius: 21px;
+    margin-right: 457px;
+    margin-left: 709px;
+}
+
+.more {
+    text-align: center;
+    color: #fffaf0;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+}
+
+
+/* わたしのこと */
+
+.profile_wrap {
+    display: flex;
+    padding-left: 174px;
+}
+
+.name {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.profile_text {
+    margin-top: 23px;
+    margin-bottom: 144px;
+}
+
+
+/* できること */
+
+#skill {
+    background-color: #fff8e8;
+    height: 718px;
+}
+
+.skill_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 198px;
+    margin-left: 436px;
+}
+
+/* .design {
+
+} */
+
+/* 
+.coding {
+
+} */
+
+.label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 33px;
+}
+
+.skill_text {
+    margin-bottom: 35px;
+}
+
+.tool_group {
+    display: flex;
+}
+
+.tool {
+    border: solid #3f2828;
+    border-radius: 4px;
+    width: 95px;
+    height: 26px;
+    text-align: center;
+}
+
+.tool_name {
+    margin-top: 6px;
+    margin-left: 19px;
+}
+
+
+/* お問い合わせ */
+
+#contact {
+    margin-bottom: 173px;
+}
+
+.ribbon {
+    width: 200px;
+    margin-left: 672px;
+}
+
+.contact_text {
+    margin-right: 433px;
+    margin-left: 672px;
+}
+
+.contact_wrap {
+    margin-left: 502px;
+}
+
+.box {
+    background-color: #efeae1;
+    color: #c1bcb4;
+    height: 42px;
+    width: 600px;
+}
+
+.box_large {
+    background-color: #efeae1;
+    color: #c1bcb4;
+    height: 200px;
+    width: 600px;
+    margin-bottom: 75px;
+}
+
+
+
+
+/* フッター */
+
+footer {
+    background-color: #c8b284;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_pc_nav ul li {
+    font-size: 14px;
+    color: #fffaf0;
+}
+
+.footer_copy p {
+    font-size: 13px;
+    color: #fffaf0;
+}
+
+.return {
+    position: fixed;
+    width: 125px;
+    height: 125px;
+    right: 40px;
+    bottom: 40px;
+}
+
+
+
+/* スライダー 制作事例 */
+
+.slick-next {
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg);
+    right: 20%;
+}
+
+.slick-next::before,
+.slick-prev::before {
+    content: "";
+}
+
+.slick-prev {
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(225deg);
+    left: 20%;
+    z-index: 100;
+}

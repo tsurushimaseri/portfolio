@@ -1,11 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>せりデザイン</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <header>
+        <div class="header_wrap">
+            <p class="logo">せりデザイン</p>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="index.html#works">制作事例</a></li>
+                    <li><a href="index.html#profile">わたしのこと</a></li>
+                    <li><a href="index.html#skill">できること</a></li>
+                    <li><a href="index.html#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="top">
+            <img class="flower" src="./Links/水引_花-1.svg" alt="梅結びの水引">
+            <p class="catch">想いが繋がるデザインを</p>
+        </section>
+        <section id="works">
+            <h1>制作事例</h1>
+            <div class="works_group">
+                <img class="works_item" src="./Links/モックアップ_ハンバーガーpop.png" alt="">
+                <img class="works_item" src="./Links/モックアップ_美容室.png" alt="">
+                <img class="works_item" src="./Links/モックアップ_ワークスペース.png" alt="">
+                <img class="works_item" src="./Links/モックアップ_ハンバーガー高級感.png" alt="">
+            </div>
+            <div class="button">
+                <p class="more">もっとみる</p>
+            </div>
+        </section>
+        <section id="profile">
+            <h1>わたしのこと</h1>
+            <div class="profile_wrap">
+                <div class="photo">
+                    <img src="./Links/わたしの写真.png" alt="わたしの写真">
+                </div>
+                <div class="profile_block">
+                    <p class="name">つるしませり</p>
+                    <p>兵庫県在住 | 一児の母</p>
+                    <p class="profile_text">デザインをする上で繋がりを大切にしています。<br>
+                    繋がることであなたも、まわりも、<br>
+                    みんなが豊かになることを目指しデザインします。</p>
+                </div>
+            </div>
+            <div class="button">
+                <p class="more">もっとみる</p>
+            </div>
+        </section>
+        <section id="skill">
+            <h1>できること</h1>
+            <div class="skill_wrap">
+                <div class="design">
+                    <img src="./Links/デザイン_イラスト.svg" alt="">
+                    <p class="label">デザイン</p>
+                    <p class="skill_text">LP(ランディングページ)やコーポレートサイトの<br>
+                        デザイン、バナーデザインなどを作成いたします。</p>
+                    <div class="tool_group">
+                        <p class="tool">使用ツール</p>
+                        <p class="tool_name">Illustrator / Photoshop</p>
+                    </div>
+                </div>
+                <div class="coding">
+                    <img src="./Links/コーディング_イラスト.svg" alt="">
+                    <p class="label">コーディング</p>
+                    <p class="skill_text">HTMLやCSS、JavaScriptを使用した<br>
+                    webサイトの実装を行います。</p>
+                    <div class="tool_group">
+                        <p class="tool">使用ツール</p>
+                        <p class="tool_name">VScode / GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h1>お問い合わせ</h1>
+            <img class="ribbon" src="./Links/水引_リボン.svg" alt="">
+            <p class="contact_text">ご覧いただきありがとうございます。<br>
+            お気軽にお問い合わせください。</p>
+            <div class="contact_wrap">
+                <p>お名前</p>
+                <p class="box">デザイン　太郎</p>
+                <p>会社名</p>
+                <p class="box">株式会社ABC</p>
+                <p>メールアドレス</p>
+                <p class="box">designtaro_abc@design.co.jp</p>
+                <p>お問い合わせ内容</p>
+                <p class="box_large">お問い合わせ内容を入力してください。</p>
+            </div>
+            <div class="button">
+                <p class="more">送信する</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_wrap">
+            <nav class="footer_pc_nav">
+                <ul>
+                    <li><a href="index.html#works">制作事例</a></li>
+                    <li><a href="index.html#profile">わたしのこと</a></li>
+                    <li><a href="index.html#skill">できること</a></li>
+                    <li><a href="index.html#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="footer_copy">
+                <p>&copy;2025 tsurushima seri</p>
+            </div>
+        </div>
+         <a href="#top">
+            <img class="return" src="./Links/水引_ツル.svg" alt="TOPへ戻る">
+         </a>
+    </footer>
+
+
+    <script>
+        $(function () {
+            $('.works_group').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            })
+
+
+            // $('.works_group').slick({
+            //     speed: 300,
+            //     slidesToShow: 5,
+            //     slidesToScroll: 1,
+            //     responsive: [
+            //         {
+            //         breakpoint: 1024,
+            //         settings: {
+            //             slidesToShow: 3,
+            //             slidesToScroll: 1,
+            //         }
+            //         },
+            //         {
+            //         breakpoint: 767,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             slidesToScroll: 1
+            //         }
+            //         },
+            //         {
+            //         breakpoint: 480,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1
+            //         }
+            //         }
+            //     ]
+            //     });
+        });
+    </script>
+
+
+
 </body>
 </html>
