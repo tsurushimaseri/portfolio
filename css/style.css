@@ -92,16 +92,12 @@ header {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    /* padding-top: 295px;
-    padding-left: 140px;
-    padding-bottom: 376px; */
 }
 
 .catch {
     font-size: 50px;
     letter-spacing: 0.05em;
-    padding-left: 10%;
-    /* padding: 380px 317px 380px 473px; */
+    padding-left: 15%;
 }
 
 
@@ -110,13 +106,19 @@ header {
 #works {
     background-color: #fff8e8;
     height: 718px;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.mizuhiki_works div{
+    left: 7%;
 }
 
 h1 {
     writing-mode: vertical-rl;
     color: #cc0000;
     font-size: 30px;
-    margin-left: 227px;
+    margin-left: 5%;
     padding-top: 103px;
 }
 
@@ -125,8 +127,22 @@ h1 {
 }
 
 .works_item {
-    /* width: 20%; */
     box-sizing: border-box;
+}
+
+.slick-slide {
+    height: 200px;
+}
+
+.slick-slide img {
+    height: 100%;
+}
+
+.slick-slide a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .button {
@@ -134,8 +150,7 @@ h1 {
     height: 42px;
     background-color: #e24242;
     border-radius: 21px;
-    margin-right: 457px;
-    margin-left: 709px;
+    align-items: center;
 }
 
 .more {
@@ -148,9 +163,15 @@ h1 {
 
 /* わたしのこと */
 
+.profile {
+    height: 726px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .profile_wrap {
     display: flex;
-    padding-left: 174px;
+    /* padding-left: 174px; */
 }
 
 .name {
@@ -169,14 +190,14 @@ h1 {
 #skill {
     background-color: #fff8e8;
     height: 718px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .skill_wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 198px;
-    margin-left: 436px;
 }
 
 /* .design {
@@ -219,12 +240,14 @@ h1 {
 /* お問い合わせ */
 
 #contact {
-    margin-bottom: 173px;
+    height: 1190px;
+    display: flex;
 }
 
 .ribbon {
     width: 200px;
     margin-left: 672px;
+    margin-top: 160px;
 }
 
 .contact_text {
