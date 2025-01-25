@@ -4,7 +4,6 @@ body {
     background-color: #fffaf0;
 }
 
-
 /* ヘッダー */
 
 header {
@@ -46,12 +45,11 @@ header {
     height: 100vh;
     align-items: center;
 }
-
 .mizuhiki {
     position: relative;
     height: 100%;
     left: 10%;
-}
+  }
 .mizuhiki div {
     height: 100%;
     width: 15px;
@@ -100,7 +98,6 @@ header {
     padding-left: 15%;
 }
 
-
 /* 制作事例 */
 
 #works {
@@ -108,11 +105,43 @@ header {
     height: 718px;
     /* display: flex;
     justify-content: space-between; */
+    position: relative;
 }
 
-.mizuhiki_works div{
-    left: 7%;
-}
+.works_wrap {
+    width: calc(90% - 200px);
+    margin-left: auto;
+  }  
+
+  .mizuhiki_works,
+  .mizuhiki_profile,
+  .mizuhiki_skill,
+  .mizuhiki_contact {
+    height: 100%;
+    position: absolute;
+    left: 10%;
+    width: 200px;
+  }
+
+  .mizuhiki_works .mizuhiki,
+  .mizuhiki_profile .mizuhiki,
+  .mizuhiki_skill .mizhiki,
+  .mizuhiki_contact .mizuhiki {
+    left: 0;
+  }
+
+  .mizuhiki_works h1,
+  .mizuhiki_profile h1,
+  .mizuhiki_skill h1,
+  .mizuhiki_contact h1 {
+    position: absolute;
+    left: 50%;
+    top: 103px;
+    transform: translateX(-50%);
+    margin-left: 0;
+    background: #fff8e8;
+    padding: 20px 0;
+  }
 
 h1 {
     writing-mode: vertical-rl;
@@ -160,20 +189,23 @@ h1 {
     letter-spacing: 0.1em;
 }
 
-
 /* わたしのこと */
 
 .profile {
     height: 726px;
     display: flex;
-    justify-content: space-between;
 }
 
 .profile_wrap {
-    display: flex;
-    /* padding-left: 174px; */
+    width: calc(90% - 200px);
+    margin-left: auto;
 }
 
+.profile_contents {
+    display: flex;
+    /* padding-left: 174px; */
+  }
+  
 .name {
     font-size: 20px;
     margin-bottom: 25px;
@@ -184,21 +216,25 @@ h1 {
     margin-bottom: 144px;
 }
 
-
 /* できること */
 
 #skill {
     background-color: #fff8e8;
     height: 718px;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    /* display: flex; */
 }
 
 .skill_wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: calc(90% - 200px);
+    margin-left: auto;
 }
+
+.skill_contents {
+    display: flex;
+    gap: 130px;
+    /* padding-left: 174px; */
+  }
 
 /* .design {
 
@@ -233,30 +269,40 @@ h1 {
 
 .tool_name {
     margin-top: 6px;
-    margin-left: 19px;
+    /* margin-left: 19px; */
 }
-
 
 /* お問い合わせ */
 
 #contact {
     height: 1190px;
-    display: flex;
-}
-
-.ribbon {
-    width: 200px;
-    margin-left: 672px;
-    margin-top: 160px;
-}
-
-.contact_text {
-    margin-right: 433px;
-    margin-left: 672px;
+    position: relative;
+    /* display: flex; */
 }
 
 .contact_wrap {
-    margin-left: 502px;
+    width: calc(90% - 200px);
+    margin-left: auto;
+  }
+
+  .contact_contents {
+    /* display: flex; */
+    /* padding-left: 174px; */
+  }
+
+.ribbon {
+    width: 200px;
+    /* margin-left: 672px;
+    margin-top: 160px; */
+}
+
+.contact_text {
+    /* margin-right: 433px;
+    margin-left: 672px; */
+}
+
+.contact_input {
+    /* margin-left: 502px; */
 }
 
 .box {
@@ -273,9 +319,6 @@ h1 {
     width: 600px;
     margin-bottom: 75px;
 }
-
-
-
 
 /* フッター */
 
@@ -305,8 +348,6 @@ footer {
     bottom: 40px;
 }
 
-
-
 /* スライダー 制作事例 */
 
 .slick-next {
@@ -327,4 +368,246 @@ footer {
     transform: rotate(225deg);
     left: 20%;
     z-index: 100;
+}
+
+/* works.html */
+
+.background_flower {
+    position: relative;
+}
+
+.title {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 222px;
+    position: absolute;
+}
+
+.background_flower img {
+    width: 100%;
+    padding-top: 149px;
+}
+
+h2 {
+    font-size: 21px;
+    letter-spacing: 0.1em;
+    border-left: 11px solid #c8b284;
+}
+
+.website_group {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.website_group img {
+    width: 480px;
+}
+
+.banner_group {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+.banner_group img {
+    width: 197px;
+}
+
+/* profile.html */
+
+.profile_top {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+}
+
+/* すきなこと */
+
+.like {
+    background-color: #fff8e8;
+}
+
+h3 {
+    color: #cc0000;
+    font-size: 22px;
+    text-align: center;
+}
+
+.like_wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 93px;
+}
+
+.tree_wrap,.hana_wrap,.coffee_wrap {
+    width: 208px;
+}
+
+.tree {
+    width: 120px;
+}
+
+.hana {
+    width: 142px;
+}
+
+.coffee {
+    width: 130px;
+}
+
+/* 経歴 */
+
+.career {
+   margin-left: 310px;
+}
+
+/* .career_line {
+    position: relative;
+    height: 100%;
+    left: 10%;
+}
+.career_line div {
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.career_line span {
+    display: block;
+    height: 100%;
+    width: 3px;
+    background-color: #cc0000;
+    position: relative;
+    left: 6px;
+} */
+
+.career_text {
+    display: flex;
+    gap: 47px;
+}
+
+/* ３つの強み */
+
+.strengths {
+    background-color: #fff8e8;
+}
+
+.strengths_wrap {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.one,.two,.three {
+    background-color: #ffedcc;
+    width: 275px;
+    height: 360px;
+    border-radius: 28px;
+    text-align: center;
+}
+
+.number {
+    font-size: 42px;
+    color: #c8b284;
+}
+
+.power {
+    font-size: 20px;
+}
+
+.strengths_text {
+    width: 200px;
+}
+
+/* 大切にしたいこと */
+
+.motto {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 62px;
+}
+
+.motto_flower {
+    width: 100px;
+}
+
+.motto p {
+    width: 665px;
+}
+
+/* contact.html */
+
+.thanks_page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.thanks {
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    padding-top: 280px;
+    padding-bottom: 45px;
+}
+
+.thanks_page img {
+    width: 549px;
+    padding-bottom: 70px;
+}
+
+.thanks_text {
+    letter-spacing: 0.05em;
+    padding-bottom: 127px;
+}
+
+.thanks_return {
+    font-size: 18px;
+    
+}
+
+.arrow {
+    width: 122px;
+    height: 7px;
+    border-bottom: 1px solid #c8b284;
+    border-left: 1px solid #c8b284;
+    transform: skew(125deg);
+    margin-bottom: 86px;
+}
+
+/* works_LIFEhairdesign.html */
+
+.works_title {
+    font-size: 22px;
+    text-align: center;
+}
+
+.detail {
+    display: flex;
+}
+
+.detail img {
+    width: 500px;
+}
+
+.detail_text {
+    display: flex;
+    width: 523px;
+}
+
+.underline {
+    
+    text-decoration:underline;
+}
+
+.picture {
+    width: 550px;
+    background-color: #f9ebcd;
 }
