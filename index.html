@@ -25,7 +25,7 @@
 <body>
     <header>
         <div class="header_wrap">
-            <p class="logo">せりデザイン</p>
+            <p class="logo"><a href="index.html#top">せりデザイン</a></p>
             <nav class="pc_nav">
                 <ul>
                     <li><a href="index.html#works">制作事例</a></li>
@@ -54,30 +54,50 @@
             <div class="works_wrap">
                 <div class="works_group">
                     <div>
-                        <a href="">
-                            <img class="works_item" src="./Links/モックアップ_POPハンバーガー.png" alt="">
+                        <a href="works_burger_pop.html">
+                            <img class="works_item" src="./Links/モックアップ_デラックスバーガーPOP.png" alt="">
                         </a>
                     </div>
                     <div>
-                        <a href="">
-                            <img class="works_item" src="./Links/モックアップ_美容室.png" alt="">
+                        <a href="works_lifehairdesign.html">
+                            <img class="works_item" src="./Links/モックアップ_LIFEhairdesign.png" alt="">
                         </a>
                     </div>
                     <div>
-                        <a href="">
-                            <img class="works_item" src="./Links/モックアップ_ワークスペース.png" alt="">
+                        <a href="works_burger_koukyuukann.html">
+                            <img class="works_item" src="./Links/モックアップ_デラックスバーガー高級感.png" alt="">
                         </a>
                     </div>
                     <div>
-                        <a href="">
-                            <img class="works_item" src="./Links/モックアップ_高級感ハンバーガー.png" alt="">
+                        <a href="works_WORKERS.html">
+                            <img class="works_item" src="./Links/モックアップ_WORKERS.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="works_springsale.html">
+                            <img class="works_item" src="./Links/モックアップ_SPRINGSALE.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="works_designcafe.html">
+                            <img class="works_item" src="./Links/モックアップ_designcafe.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="works_trrrrip.html">
+                            <img class="works_item" src="./Links/モックアップ_TRRRRIP.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="works_portfolio.html">
+                            <img class="works_item" src="./Links/モックアップ_portfolio.png" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="works_arrow_left"></div>
-                <div class="works_arrow_right"></div>
+                
+                
                 <div class="button works_button">
-                    <p class="more">もっとみる</p>
+                    <p class="more"><a href="works.html">もっとみる</a></p>
                 </div>
             </div>
         </section>
@@ -102,7 +122,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <p class="more">もっとみる</p>
+                    <p class="more"><a href="profile.html">もっとみる</a></p>
                 </div>
             </div>
         </section>
@@ -201,8 +221,10 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 dots: true,
-                arrows: false,
-                slidesToShow:3
+                arrows: true,
+                slidesToShow:3,
+                prevArrow: '<div class="works_arrow_left"></div>',
+                nextArrow:'<div class="works_arrow_right"></div>',
             })
 
 

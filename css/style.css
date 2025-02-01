@@ -102,7 +102,7 @@ header {
 
 #works {
     background-color: #fff8e8;
-    height: 718px;
+    height: 660px;
     position: relative;
 }
 
@@ -169,6 +169,11 @@ h1 {
     box-sizing: border-box;
 }
 
+.works_item:hover {
+    opacity: 0.6; 
+    transition: 0.5s;
+}
+
 .slick-slide {
     height: 200px;
 }
@@ -186,6 +191,9 @@ h1 {
 
 .slick-dots {
     bottom: -87px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slick-dots li.slick-active button:before,
@@ -203,22 +211,20 @@ h1 {
     border-bottom: 1px solid #c8b284;
     border-left: 1px solid #c8b284;
     transform: translateX(-50%) skew(125deg);
-    margin-top: 70px;
-    margin-bottom: 86px;
     position: absolute;
-    left: 53%;
+    left: 33%;
+    bottom: -80px;
 }
 
 .works_arrow_right {
     width: 95px;
     height: 7px;
     border-bottom: 1px solid #c8b284;
-    border-left: 1px solid #c8b284;
-    transform: translateX(-50%) skew(125deg);
-    margin-top: 70px;
-    margin-bottom: 86px;
+    border-right: 1px solid #c8b284;
+    transform: translateX(-50%) skew(-125deg);
     position: absolute;
-    left: 71%;
+    right: 25%;
+    bottom: -80px;
 }
 
 .button {
@@ -226,11 +232,16 @@ h1 {
     height: 42px;
     background-color: #e24242;
     border-radius: 21px;
-    margin-left: 40%;
+    margin: 0 auto;
+}
+
+.button:hover {
+    background-color: #c8b284;
+    transition: 0.5s;
 }
 
 .works_button {
-    margin-top: 150px;
+    margin-top: 160px;
 }
 
 .more {
@@ -297,11 +308,13 @@ h1 {
   }
 
 .design {
+    width: 30%;
     text-align: center;
     display: block;
 }
 
 .coding {
+    width: 30%;
     text-align: center;
     display: block;
 }
@@ -323,6 +336,7 @@ h1 {
 
 .tool_group {
     display: flex;
+    justify-content: center;
 }
 
 .tool {
@@ -330,7 +344,6 @@ h1 {
     border-radius: 4px;
     width: 95px;
     height: 26px;
-    text-align: center;
 }
 
 .tool_name {
@@ -447,6 +460,14 @@ footer {
     z-index: 100;
 }
 
+.works_group img {
+    transform: scale(.8);
+    transition: transform .3s;
+  }
+  .works_group.slick-center img {
+    transform: scale(1);
+  }
+
 /* works.html */
 
 .background_flower {
@@ -469,13 +490,14 @@ footer {
 }
 
 .label_banner {
-    padding-top: 196px;
+    padding-top: 50px;
 }
 
 .label {
     font-size: 21px;
     letter-spacing: 0.1em;
     padding-left: 12%;
+    padding-bottom: 50px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -490,22 +512,44 @@ footer {
 }
 
 .website_group {
+    max-width: 1062px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 75px;
-    /* max-width: 1111px; */
+    flex-wrap: wrap;
+}
+
+.website_group div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
 }
 
 .website_group img {
     width: 480px;
 }
 
+.website_group p,
+.banner_group p {
+    padding-top: 20px;
+}
+
 .banner_group {
     max-width: 900px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 87px;
+}
+
+.banner_group div {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
 }
 
 .banner_group img {
@@ -516,6 +560,16 @@ footer {
 .banner_group img {
     text-align: center;
 }
+
+.website_group img,
+.banner_group img {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+  }
+.website_group img:hover,
+.banner_group img:hover {
+    opacity: 0.6; 
+  }
 
 /* profile.html */
 
@@ -528,7 +582,7 @@ footer {
 }
 
 .profile_top img {
-    padding-top: 118px;
+    padding-top: 30px;
     padding-bottom: 45px;
     margin: 0 auto;
 }
@@ -585,6 +639,11 @@ h3 {
     width: 130px;
 }
 
+.like_title {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
 /* 経歴 */
 
 .career {
@@ -627,15 +686,25 @@ h3 {
   }
 
   .career_arrow {
-    width: 10px;
-    height: 7px;
-    border-bottom: 3px solid #cc0000;
-    border-left: 3px solid #cc0000;
-    /* transform: translateY(-50%) skew(125deg); */
-    transform: rotate(-90deg);
-    position: absolute;
-    padding-left: 50px;
+    width: 3px;
+    height: 20px;
+    background-color: #cc0000;
+    position: relative;
+    display: inline-block;
+    border-radius: 0 0 9999px 9999px;
 }
+.career_arrow::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 1.5px);
+    width: 3px;
+    height: 20px;
+    border-radius: 9999px;
+    background-color: #cc0000;
+    transform: rotate(-45deg);
+    transform-origin: 50% calc(100% - 1.5px);
+  }
 
 .career_year {
     width: 61.25px;
@@ -659,7 +728,6 @@ h3 {
     justify-content: center;
     gap: 55px;
     padding-top: 74px;
-    position: absolute;
     margin: 0 auto;
 }
 
@@ -668,19 +736,23 @@ h3 {
     width: 275px;
     height: 360px;
     border-radius: 28px;
+    position: relative;
 }
 
 .number {
     font-size: 42px;
     color: #c8b284;
     text-align: center;
-    position: relative;
     top: -10%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .power {
     font-size: 20px;
     text-align: center;
+    padding-top: 40px;
 }
 
 .strengths_text {
@@ -748,11 +820,16 @@ h3 {
     
 }
 
+.thanks_return_wrap:hover {
+    opacity: 0.6;
+    transition-duration: 0.5s;
+}
+
 .arrow {
     width: 122px;
     height: 7px;
-    border-bottom: 1px solid #c8b284;
-    border-left: 1px solid #c8b284;
+    border-bottom: 2px solid #c8b284;
+    border-left: 2px solid #c8b284;
     transform: translateX(-50%) skew(125deg);
     margin-bottom: 86px;
     position: absolute;
@@ -764,13 +841,17 @@ h3 {
 .works_title {
     font-size: 22px;
     text-align: center;
-    padding-bottom: 134px;
+}
+
+.works_title_sub {
+    font-size: 18px;
 }
 
 .explain {
     display: flex;
     justify-content: center;
     gap: 92px;
+    padding-top: 134px;
 }
 
 .explain img {
@@ -792,11 +873,35 @@ h3 {
 }
 
 .explain_text {
+    width: 500px;
     padding-top: 27px;
+    padding-left: 2%;
 }
 
-.picture {
+.explain_picture {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.picture_pc {
     width: 550px;
+    background-color: #f9ebcd;
+    padding: 25px;
+    margin: 142px auto;
+    display: block;
+}
+
+.picture_sp {
+    width: 350px;
+    background-color: #f9ebcd;
+    padding: 25px;
+    margin: 142px auto;
+    display: block;
+}
+
+.picture_koukyuukann {
+    width: 622px;
     background-color: #f9ebcd;
     padding: 25px;
     margin: 142px auto;
