@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
 body {
+    background-image: url("./Links/背景.jpg");
+    background-repeat: repeat;
     background-color: #fffaf0;
+    background-blend-mode: soft-light;
 }
 
 /* ヘッダー */
@@ -364,8 +367,8 @@ h1 {
   }
 
   .contact_contents {
-    text-align: center;
-    display: block;
+    /* text-align: center;
+    display: block; */
   }
 
 .ribbon {
