@@ -21,9 +21,10 @@
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
       </script>
+      <link rel="stylesheet" type="text/css" href="css/8-11.css">
 </head>
 <body>
-    <header>
+    <header class="header_top">
         <div class="header_wrap">
             <p class="logo"><a href="index.html#top">せりデザイン</a></p>
             <nav class="pc_nav">
@@ -42,7 +43,8 @@
                 <div><span></span></div>
                 <img class="flower" src="./Links/水引_花.svg" alt="梅結びの水引">
             </div>
-            <p class="catch">想いが繋がるデザインを</p>
+            <!-- <p class="eachTextAnime">テキストが1文字ずつ出てきます</p> -->
+            <p class="catch eachTextAnime">想いが繋がるデザインを</p>
         </section>
         <section id="works">
             <div class="mizuhiki_works">
@@ -138,7 +140,7 @@
                     <div class="design">
                         <img src="./Links/イラスト_デザイン.svg" alt="">
                         <p class="skill_contents_label">デザイン</p>
-                        <p class="skill_text">LP(ランディングページ)やコーポレートサイトの<br>
+                        <p class="skill_text">LP(ランディングページ)やコーポレートサイトの
                             デザイン、バナーデザインなどを作成いたします。</p>
                         <div class="tool_group">
                             <p class="tool">使用ツール</p>
@@ -148,7 +150,7 @@
                     <div class="coding">
                         <img src="./Links/イラスト_コーディング.svg" alt="">
                         <p class="skill_contents_label">コーディング</p>
-                        <p class="skill_text">HTMLやCSS、JavaScriptを使用した<br>
+                        <p class="skill_text">HTMLやCSS、JavaScriptを使用した
                         webサイトの実装を行います。</p>
                         <div class="tool_group">
                             <p class="tool">使用ツール</p>
@@ -171,7 +173,9 @@
                     <p class="contact_text">ご覧いただきありがとうございます。<br>お気軽にお問い合わせください。</p>
                     <div class="contact_input_wrap">
                         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSev6W0AU5NtK4fhQN93OKPbR0OmEblyigNspcTx_881QqVMGQ/formResponse"
-                            method="POST" target="_self" >
+                        method="POST"
+                        target="hidden_iframe"
+                        onsubmit="submitted=true;" >
                             <div class="contact_input">
                                 <p>お名前</p>
                                 <input type="text" placeholder="デザイン　太郎" name="entry.2005620554" required>
@@ -366,25 +370,12 @@
             //     ]
             //     });
         });
+
     </script>
 
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--自作のJS-->
+    <script src="js/8-11.js"></script>
 
 </body>
 </html>
-
-
-<!-- <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSev6W0AU5NtK4fhQN93OKPbR0OmEblyigNspcTx_881QqVMGQ/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve CEkLOc" data-shuffle-seed="5682247257657248098" data-clean-viewform-url="https://docs.google.com/forms/d/e/1FAIpQLSev6W0AU5NtK4fhQN93OKPbR0OmEblyigNspcTx_881QqVMGQ/viewform" data-response="%.@.]" data-dlp-data="%.@.null,false]" data-first-entry="0" data-last-entry="4" data-is-first-page="true"></form>
-
-
-<div jsmodel="CP1oW" data-params="%.@.[1633920210,&quot;お名前&quot;,null,0,[[2005620554,null,true,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;お名前&quot;]],&quot;i1&quot;,&quot;i2&quot;,&quot;i3&quot;,false,&quot;i4&quot;]">
-
-<div jsmodel="CP1oW" data-params="%.@.[227649005,&quot;会社名&quot;,null,0,[[1045781291,null,false,null,[[2,102,null,&quot;Please enter a valid email address&quot;]],null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;会社名&quot;]],&quot;i6&quot;,&quot;i7&quot;,&quot;i8&quot;,false,&quot;i9&quot;]">
-
-
-<div jsmodel="CP1oW" data-params="%.@.[790080973,&quot;メールアドレス&quot;,null,0,[[1065046570,null,true,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;メールアドレス&quot;]],&quot;i11&quot;,&quot;i12&quot;,&quot;i13&quot;,false,&quot;i14&quot;]">
-
-
-<div jsmodel="CP1oW" data-params="%.@.[1846923513,&quot;お問い合わせ内容&quot;,null,1,[[839337160,null,true,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;\u003cp\u003eお問い合わせ内容\u003c/p\u003e&quot;]],&quot;i16&quot;,&quot;i17&quot;,&quot;i18&quot;,false,&quot;i19&quot;]"> -->
-
-
