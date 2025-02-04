@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 body {
-    background-image: url("./Links/背景.jpg");
+    background-image: url("../Links/背景.jpg");
     background-repeat: repeat;
-    background-color: #fffaf0;
+    background-color: rgba(255,250,240,0.6);
     background-blend-mode: soft-light;
 }
 
@@ -236,6 +236,7 @@ h1 {
     background-color: #e24242;
     border-radius: 21px;
     margin: 0 auto;
+    border: none;
 }
 
 .button:hover {
@@ -357,18 +358,13 @@ h1 {
 /* お問い合わせ */
 
 #contact {
-    height: 1190px;
     position: relative;
+    padding-bottom: 100px;
 }
 
 .contact_wrap {
     width: calc(90% - 200px);
     margin-left: auto;
-  }
-
-  .contact_contents {
-    /* text-align: center;
-    display: block; */
   }
 
 .ribbon {
@@ -384,25 +380,34 @@ h1 {
     margin-bottom: 25px;
 }
 
-.box {
+.contact_input input {
     background-color: #efeae1;
-    color: #c1bcb4;
-    height: 42px;
+    height: 40px;
     width: 600px;
     border-radius: 10px;
-    padding-top: 13px;
     padding-left: 20px;
+    border: none;
 }
 
-.box_large {
+.contact_input textarea {
     background-color: #efeae1;
-    color: #c1bcb4;
     height: 200px;
     width: 600px;
     margin-bottom: 75px;
     border-radius: 10px;
-    padding-top: 13px;
+    padding-top: 20px;
     padding-left: 20px;
+    border: none;
+}
+
+.contact_input input::placeholder,
+.contact_input textarea::placeholder {
+    color: #c1bcb4;
+    line-height: 2.18px;
+}
+
+.button_more {
+    padding-top: 0px;
 }
 
 /* フッター */
@@ -410,9 +415,6 @@ h1 {
 footer {
     background-color: #c8b284;
     height: 280px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .footer_pc_nav ul {
@@ -439,6 +441,12 @@ footer {
     width: 120px;
     right: 80px;
     bottom: 40px;
+    fill: #cc0000;
+    transition: 0.5s;
+}
+
+.return.in_footer {
+    fill: #fffaf0;
 }
 
 /* スライダー 制作事例 */
@@ -467,7 +475,7 @@ footer {
     transform: scale(.8);
     transition: transform .3s;
   }
-  .works_group.slick-center img {
+  .works_group .slick-center img {
     transform: scale(1);
   }
 
@@ -475,13 +483,13 @@ footer {
 
 .background_flower {
     position: relative;
-    padding-bottom: 127px;
+    padding-bottom: 100px;
 }
 
 .title {
     font-size: 40px;
     text-align: center;
-    padding-top: 222px;
+    padding-top: 150px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -489,7 +497,7 @@ footer {
 
 .background_flower img {
     width: 100%;
-    padding-top: 149px;
+    padding-top: 80px;
 }
 
 .label_banner {
@@ -673,7 +681,7 @@ h3 {
     .career_content {
       border-left: 3px #cc0000 solid;
       display: flex;
-      gap: 47px;
+      gap: 35px;
       padding-left: 60px;
     }
     .career_content:before {
@@ -714,7 +722,7 @@ h3 {
 }
 
 .career_text {
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 }
 
 
@@ -799,7 +807,7 @@ h3 {
 .thanks {
     font-size: 40px;
     letter-spacing: 0.2em;
-    padding-top: 280px;
+    padding-top: 200px;
     padding-bottom: 45px;
 }
 
@@ -854,7 +862,7 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 92px;
-    padding-top: 134px;
+    padding-top: 110px;
 }
 
 .explain img {
@@ -871,8 +879,13 @@ h3 {
     padding: 15px 7px;
 }
 
-.textspace {
-    padding-right: 57px;
+.explain_label {
+    width: 18%;
+    padding-right: 20px;
+}
+
+.explain_detail {
+    width: 80%;
 }
 
 .explain_text {
