@@ -21,7 +21,6 @@
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
       </script>
-      <link rel="stylesheet" type="text/css" href="css/8-11.css">
 </head>
 <body>
     <header class="header_top">
@@ -35,6 +34,21 @@
                     <li><a href="index.html#contact">お問い合わせ</a></li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <div class="background_flower_sp">
+                    <p class="title">せりデザイン</p>
+                    <img src="./Links/水引_半透明.svg" alt="">
+                </div>
+                <ul>
+                    <li><a href="index.html#works">制作事例</a></li>
+                    <li><a href="index.html#profile">わたしのこと</a></li>
+                    <li><a href="index.html#skill">できること</a></li>
+                    <li><a href="index.html#skill">お問い合わせ</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -43,8 +57,7 @@
                 <div><span></span></div>
                 <img class="flower" src="./Links/水引_花.svg" alt="梅結びの水引">
             </div>
-            <!-- <p class="eachTextAnime">テキストが1文字ずつ出てきます</p> -->
-            <p class="catch eachTextAnime">想いが繋がるデザインを</p>
+            <p class="catch eachTextAnime">想いが繋がる<br class="sp_br">デザインを</p>
         </section>
         <section id="works">
             <div class="mizuhiki_works">
@@ -96,8 +109,8 @@
                         </a>
                     </div>
                 </div>
-                
-                
+
+                <div class="slick_nav"></div>
                 <div class="button works_button">
                     <p class="more"><a href="works.html">もっとみる</a></p>
                 </div>
@@ -117,7 +130,7 @@
                     </div>
                     <div class="profile_block">
                         <p class="name">つるしませり</p>
-                        <p>兵庫県在住 | 一児の母</p>
+                        <p class="profile_item">兵庫県在住 | 一児の母</p>
                         <p class="profile_text">デザインをする上で繋がりを大切にしています。<br>
                         繋がることであなたも、まわりも、<br>
                         みんなが豊かになることを目指しデザインします。</p>
@@ -325,6 +338,8 @@
                 dots: true,
                 arrows: true,
                 slidesToShow:3,
+                appendArrows: $('.slick_nav'),
+                appendDots: $('.slick_nav'),
                 prevArrow: '<div class="works_arrow_left"></div>',
                 nextArrow:'<div class="works_arrow_right"></div>',
                 centerMode: true, 
@@ -340,42 +355,74 @@
                 }
             })
 
-
-            // $('.works_group').slick({
-            //     speed: 300,
-            //     slidesToShow: 5,
-            //     slidesToScroll: 1,
-            //     responsive: [
-            //         {
-            //         breakpoint: 1024,
-            //         settings: {
-            //             slidesToShow: 3,
-            //             slidesToScroll: 1,
-            //         }
-            //         },
-            //         {
-            //         breakpoint: 767,
-            //         settings: {
-            //             slidesToShow: 2,
-            //             slidesToScroll: 1
-            //         }
-            //         },
-            //         {
-            //         breakpoint: 480,
-            //         settings: {
-            //             slidesToShow: 1,
-            //             slidesToScroll: 1
-            //         }
-            //         }
-            //     ]
-            //     });
+            $('.works_group').slick({
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                    },
+                    {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    },
+                ]
+                });
         });
 
+        // eachTextAnimeにappeartextというクラス名を付ける定義
+        function EachTextAnimeControl() {
+            $('.eachTextAnime').each(function () {
+                var elemPos = $(this).offset().top - 50;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass("appeartext");
+
+                } else {
+                    $(this).removeClass("appeartext");
+                }
+            });
+        }
+
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).scroll(function () {
+            EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+        // 画面が読み込まれたらすぐに動かしたい場合の記述
+        $(window).on('load', function () {
+            //spanタグを追加する
+            var element = $(".eachTextAnime");
+            element.each(function () {
+                var text = $(this).text();
+                var textbox = "";
+                text.split('').forEach(function (t, i) {
+                    if (t !== " ") {
+                        if (i < 10) {
+                            textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+                        } else {
+                            var n = i / 10;
+                            textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+                        }
+
+                    } else {
+                        textbox += t;
+                    }
+                });
+                $(this).html(textbox);
+            });
+
+            EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!--自作のJS-->
-    <script src="js/8-11.js"></script>
-
 </body>
 </html>
