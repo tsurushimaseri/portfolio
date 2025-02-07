@@ -141,10 +141,10 @@ header {
     width: 200px;
   }
 
-  .mizuhiki_works .mizuhiki_pc,
-  .mizuhiki_profile .mizuhiki_pc,
-  .mizuhiki_skill .mizuhiki_pc,
-  .mizuhiki_contact .mizuhiki_pc {
+  .mizuhiki_works .mizuhiki,
+  .mizuhiki_profile .mizuhiki,
+  .mizuhiki_skill .mizuhiki,
+  .mizuhiki_contact .mizuhiki {
     left: 0;
   }
 
@@ -410,6 +410,7 @@ h1 {
 
 .contact_input p {
     text-align: left;
+    padding-left: 7px;
 }
 
 .contact_input input {
@@ -632,15 +633,20 @@ footer {
     margin: 0 auto;
 }
 
-.profile_top_text {
+.profile_top_text_pc {
+    display: block;
     padding-top: 34px;
     padding-bottom: 99px;
+}
+
+.profile_top_text_sp {
+    display: none;
 }
 
 /* すきなこと */
 
 .like {
-    height: 720px;
+    height: auto;
     background-color: #fff8e8;
 }
 
@@ -657,6 +663,7 @@ h3 {
     display: flex;
     justify-content: space-between; 
     padding-top: 63px;
+    padding-bottom: 50px;
 }
 
 .tree_wrap,.hana_wrap,.coffee_wrap {
@@ -692,9 +699,10 @@ h3 {
 /* 経歴 */
 
 .career {
-    height: 880px;
+    height: auto;
     max-width: 813px;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 .timeline {
@@ -716,8 +724,6 @@ h3 {
     top: -1px;
   }
   
-  /* for Desktop */
-  @media ( min-width : 640px ){
     .timeline > li {
       margin: 0;
       position: relative;
@@ -739,7 +745,6 @@ h3 {
       top: 8px;
       border-radius: 100%;
     }
-  }
 
   .career_arrow {
     width: 3px;
@@ -774,8 +779,9 @@ h3 {
 /* ３つの強み */
 
 .strengths {
-    height: 645px;
+    height: auto;
     background-color: #fff8e8;
+    padding-bottom: 50px;
 }
 
 .strengths_wrap {
@@ -821,7 +827,7 @@ h3 {
 /* 大切にしたいこと */
 
 .motto {
-    height: 523px;
+    height: auto;
 }
 
 .motto_wrap {
@@ -831,6 +837,7 @@ h3 {
     justify-content: center;
     gap: 62px;
     padding-top: 89px;
+    padding-bottom: 100px;
 }
 
 .motto_flower {
@@ -1100,8 +1107,6 @@ h3 {
     .sp_nav ul li {
         color: #3f2828;
         font-size: 14px;
-        /* font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; */
     }
 
     /* トップ */
@@ -1122,6 +1127,25 @@ h3 {
         transform: translateY(-50%);
     }
 
+    #top .mizuhiki {
+        width: 16%;
+    }
+
+    .mizuhiki_works,
+    .mizuhiki_profile,
+    .mizuhiki_skill,
+    .mizuhiki_contact {
+        width: 16%;
+    }
+
+    .works_wrap,
+    .profile_wrap,
+    .skill_wrap,
+    .contact_wrap {
+        width: 70%;
+        margin-left: auto;
+    }
+
     .catch {
         font-size: 40px;
         letter-spacing: 0.08em;
@@ -1129,30 +1153,150 @@ h3 {
 
     /* わたしのこと */
 
+    .profile_wrap {
+        margin: 0 25%;
+    }
 
+    .photo {
+        padding-top: 150px;
+        width: 60%;
+        text-align: center;
+    }
 
+    .profile_block {
+        padding-top: 180px;
+    }
+
+    /* できること */
+
+    .skill_contents {
+        display: block;
+        margin: 0 auto;
+      }
+
+      #skill {
+        height: 780px;
+    }
+    
+    .skill_wrap {
+        padding-top: 65px;
+    }
+
+    .design {
+        width: 90%;
+        text-align: center;
+        display: block;
+    }
+    
+    .coding {
+        width: 90%;
+        text-align: center;
+        display: block;
+    }    
+    
+    .skill_contents img {
+        width: 115px;
+    }
+    
+    .skill_contents_label {
+        font-size: 16px;
+        margin-top: 28px;
+        margin-bottom: 32px;
+    }
+    
+    .skill_text {
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+    
+    .tool {
+        font-size: 12px;
+        width: 80px;
+        height: 20px;
+    }
+    
+    .tool_name {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+    
+    
     /* お問い合わせ */
 
     .contact_input_wrap {
-        max-width: 450px;
+        max-width: 400px;
         margin: 0 auto;
     }
+
+    /* works.html */
+
+    .background_flower img {
+        padding-top: 12%;
+    }
+
+    .title {
+        font-size: 28px;
+        padding-top: 17%;
+    }
+
+
+    .website_group img {
+        width: 350px;
+    }
+
+    .banner_group img {
+        width: 160px;
+    }
+
+
+    /* profile.html */
+
+    .like_wrap {
+        max-width: 600px;
+    }
+
+    .career {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .strengths_wrap {
+        gap: 40px;
+    }
+
+    .one, .two, .three {
+        width: 28%;
+    }
+
+    .motto_wrap {
+        max-width: 600px;
+    }
+    
+    /* contact.html */
+
+    /* works_LIFEhairdesign.html */
 }
 
 /* 767px以下 */
 
 @media screen and (max-width: 767px) {
 
+    p {
+        font-size: 14px;
+    }
+
     /* トップ */
 
+    .top {
+        height: 640px;
+    }
+
     .logo {
-        font-size: 14px;
+        font-size: 16px;
         padding-top: 10px;
-        padding-left: 14px;
     }
 
     .flower {
-        width: 110px;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -1168,174 +1312,318 @@ h3 {
         display: block;
     }
 
-/* 制作事例 */
+    /* 制作事例 */
 
-#works {
-    height: 530px;
+    #works {
+        height: 530px;
+    }
+    .mizuhiki_works h1,
+    .mizuhiki_profile h1,
+    .mizuhiki_skill h1,
+    .mizuhiki_contact h1 {
+        position: absolute;
+        left: 50%;
+        top: 103px;
+        transform: translateX(-50%);
+        margin-left: 0;
+        background: #fff8e8;
+        padding: 20px 0;
+    }
+
+    .mizuhiki_profile h1,
+    .mizuhiki_contact h1 {
+        position: absolute;
+        left: 50%;
+        top: 103px;
+        transform: translateX(-50%);
+        margin-left: 0;
+        background: #fffaf0;
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 17px;
+    }
+
+    .works_wrap {
+        padding-top: 58px;
+    }
+
+    .button {
+        width: 140px;
+        height: 29px;
+    }
+
+    .works_button {
+        margin-top: 125px;
+    }
+
+    .more {
+        font-size: 14px;
+        padding-top: 3px;
+    }
+
+    /* わたしのこと */
+
+    #profile {
+        height: 683px;
+    }
+
+    .profile_contents {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .photo {
+        width: 228px;
+        padding-top: 73px;
+    }
+
+    .profile_block {
+        padding-top: 35px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .profile_text {
+        margin-bottom: 55px;
+    }
+
+    /* できること */
+
+    #skill {
+        height: 780px;
+    }
+
+    .skill_wrap {
+        padding-top: 65px;
+    }
+
+    .skill_contents img {
+        width: 115px;
+    }
+
+    .skill_contents_label {
+        font-size: 16px;
+        margin-top: 28px;
+        margin-bottom: 32px;
+    }
+
+    .skill_text {
+        margin-bottom: 32px;
+    }
+
+    .tool {
+        font-size: 12px;
+    }
+
+    .tool_name {
+        margin-bottom: 50px;
+    }
+
+    /* お問い合わせ */
+
+    .ribbon {
+        width: 150px;
+        padding-top: 75px;
+    }
+
+    .contact_input_wrap {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .button_more {
+        padding-top: 0px;
+    }
+
+    /* フッター */
+
+    footer {
+        height: 340px;
+    }
+
+    .footer_pc_nav ul {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    .footer_pc_nav ul li {
+        font-size: 13px;
+        padding-top: 45px;
+    }
+
+    .footer_copy {
+        padding-top: 45px;
+    }
+
+    /* works.html */
+
+    .background_flower {
+        padding-bottom: 70px;
+    }
+
+    .background_flower img {
+        padding-top: 12%;
+    }
+
+    .title {
+        font-size: 18px;
+        padding-top: 17%;
+    }
+
+    .label {
+        font-size: 15px;
+    }
+
+    .website_group,
+    .banner_group  {
+        display: block;
+    }
+
+    .website_group div,
+    .banner_group div {
+        width: 100%;
+    }
+
+    /* profile.html */
+
+    .profile_top img {
+        padding-top: 0px;
+    }
+
+    .profile_top_name {
+        font-size: 15px;
+        letter-spacing: 0.15em;
+    }
+
+    .profile_top_text_pc {
+        display: none;
+    }
+    
+    .profile_top_text_sp {
+        display: block;
+        margin: 0 auto;
+        margin-top: 23px;
+        margin-bottom: 50px;
+        text-align: left;
+        letter-spacing: 0.05em;
+        position:relative;
+    }
+
+    .profile_top_text_sp::before {
+        content:"";
+        display:block;
+        width:2px;
+        height:80px;
+        background-color:#c8b284;
+        border-radius: 2px;
+        position:absolute;
+        top:0;
+        left:-15px;
+    }
+
+    .like {
+        height: auto;
+    }
+
+    h3 {
+        font-size: 16px;
+        padding-top: 60px;
+    }
+
+    .like_wrap {
+        display: block;
+        padding-top: 0;
+        padding-bottom: 70px;
+    }
+
+    .like_title {
+        font-size: 16px;
+    }
+
+    .tree_wrap,
+    .hana_wrap,
+    .coffee_wrap {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 63px;
+    }
+
+    .career {
+        height: auto;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .career_text {
+        width: 300px;
+    }
+
+    .strengths_wrap {
+        width: 80%;
+        display: block;
+    }
+
+    .one, .two, .three {
+        width: 295px;
+        height: 282px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .number {
+        font-size: 35px;
+    }
+
+    .power {
+        font-size: 18px;
+    }
+
+    .motto_wrap {
+        display: block;
+        width: 80%;
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .motto_flower {
+        width: 80px;
+    }
+
+    .motto_wrap p {
+        width: 295px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    /* contact.html */
+
+    .thanks {
+        font-size: 20px;
+        padding-top: 130px;
+        padding-bottom: 45px;
+    }
+
+    .thanks_page img {
+        width: 350px;
+        padding-bottom: 50px;
+    }
+
+    .thanks_text {
+        padding-bottom: 100px;
+    }
+
+    .thanks_return {
+        font-size: 15px;
+    }
+
+    .arrow {
+        width: 100px;
+    }
+
+    /* works_LIFEhairdesign.html */
 }
-
-  .mizuhiki_works,
-  .mizuhiki_profile,
-  .mizuhiki_skill,
-  .mizuhiki_contact {
-    height: 100%;
-    position: absolute;
-    left: 10%;
-    width: 200px;
-  }
-
-  .mizuhiki_works .mizuhiki_pc,
-  .mizuhiki_profile .mizuhiki_pc,
-  .mizuhiki_skill .mizuhiki_pc,
-  .mizuhiki_contact .mizuhiki_pc {
-    left: 0;
-  }
-
-  .mizuhiki_works h1,
-  .mizuhiki_profile h1,
-  .mizuhiki_skill h1,
-  .mizuhiki_contact h1 {
-    position: absolute;
-    left: 50%;
-    top: 103px;
-    transform: translateX(-50%);
-    margin-left: 0;
-    background: #fff8e8;
-    padding: 20px 0;
-  }
-
-  .mizuhiki_profile h1,
-  .mizuhiki_contact h1 {
-    position: absolute;
-    left: 50%;
-    top: 103px;
-    transform: translateX(-50%);
-    margin-left: 0;
-    background: #fffaf0;
-    padding: 20px 0;
-  }
-
-  h1 {
-    font-size: 17px;
-  }
-
-  .button {
-    width: 140px;
-    height: 29px;
-}
-
-  .more {
-    font-size: 14px;
-    padding-top: 3px;
-  }
-
-/* わたしのこと */
-
-#profile {
-    height: 683px;
-}
-
-.profile_contents {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .photo {
-    width: 228px;
-    padding-top: 73px;
-  }
-
-  .profile_block {
-    padding-top: 35px;
-}
-
-.name {
-    font-size: 16px;
-}
-
-.profile_item {
-    font-size: 14px;
-}
-
-.profile_text {
-    font-size: 14px;
-    margin-bottom: 55px;
-}
-
-/* できること */
-
-#skill {
-    height: 780px;
-}
-
-.skill_wrap {
-    padding-top: 65px;
-}
-
-.skill_contents {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .skill_contents img {
-    width: 115px;
-}
-
-.skill_contents_label {
-    font-size: 16px;
-    margin-top: 28px;
-    margin-bottom: 32px;
-}
-
-.skill_text {
-    font-size: 14px;
-    margin-bottom: 32px;
-}
-
-.tool {
-    font-size: 12px;
-}
-
-.tool_name {
-    font-size: 14px;
-    margin-bottom: 50px;
-}
-
-/* お問い合わせ */
-
-.ribbon {
-    width: 100px;
-}
-
-.contact_wrap p {
-    font-size: 14px;
-}
-
-.contact_input_wrap {
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-/* フッター */
-
-footer {
-    height: 340px;
-}
-
-.footer_pc_nav ul {
-    display: block;
-    text-align: center;
-    padding: 0;
-}
-
-.footer_pc_nav ul li {
-    font-size: 13px;
-    padding-top: 45px;
-}
-
-.footer_copy {
-    padding-top: 45px;
-}
-  
-}
-

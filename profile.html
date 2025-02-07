@@ -34,6 +34,21 @@
                     <li><a href="index.html#contact">お問い合わせ</a></li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <div class="background_flower_sp">
+                    <p class="title">せりデザイン</p>
+                    <img src="./Links/水引_半透明.svg" alt="">
+                </div>
+                <ul>
+                    <li><a href="index.html#works">制作事例</a></li>
+                    <li><a href="index.html#profile">わたしのこと</a></li>
+                    <li><a href="index.html#skill">できること</a></li>
+                    <li><a href="index.html#skill">お問い合わせ</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -43,8 +58,9 @@
         </div>
         <div class="profile_top">
             <img class="photo" src="./Links/わたしの写真.png" alt="">
-            <p>つるしま　せり</p>
-            <p class="profile_top_text">1992年生まれ　|　兵庫県出身・在住　|　息子が1人います</p>
+            <p class="profile_top_name">つるしま　せり</p>
+            <p class="profile_top_text_pc">1992年生まれ　|　兵庫県出身・在住　|　息子が1人います</p>
+            <p class="profile_top_text_sp">1992年生まれ<br>兵庫県出身・在住<br>息子が1人います</p>
         </div>
         <div class="like">
             <h3>- すきなこと -</h3>
@@ -190,5 +206,13 @@
             <img class="return" src="./Links/水引_ツル.svg" alt="TOPへ戻る">
          </a>
     </footer>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click',function(){
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        });
+    </script>
 </body>
 </html>

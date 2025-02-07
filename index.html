@@ -332,6 +332,11 @@
 
     <script>
         $(function () {
+            $('.sp_btn').on('click',function(){
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+
             $('.works_group').slick({
                 autoplay: true,
                 autoplaySpeed: 2000,
@@ -343,21 +348,7 @@
                 prevArrow: '<div class="works_arrow_left"></div>',
                 nextArrow:'<div class="works_arrow_right"></div>',
                 centerMode: true, 
-            })
-
-            $(window).on('scroll', function() {
-                let returnY = $('.return').offset().top + $('.return').height()
-                let footerY = $('footer').offset().top
-                if (returnY > footerY) {
-                    $('.return').addClass('in_footer')
-                } else {
-                    $('.return').removeClass('in_footer')
-                }
-            })
-
-            $('.works_group').slick({
                 speed: 300,
-                slidesToShow: 3,
                 slidesToScroll: 1,
                 responsive: [
                     {
@@ -375,7 +366,17 @@
                     }
                     },
                 ]
-                });
+            })
+
+            $(window).on('scroll', function() {
+                let returnY = $('.return').offset().top + $('.return').height()
+                let footerY = $('footer').offset().top
+                if (returnY > footerY) {
+                    $('.return').addClass('in_footer')
+                } else {
+                    $('.return').removeClass('in_footer')
+                }
+            })
         });
 
         // eachTextAnimeにappeartextというクラス名を付ける定義
