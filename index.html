@@ -38,7 +38,7 @@
                 <span></span>
             </div>
             <nav class="sp_nav">
-                <div class="background_flower_sp">
+                <div class="background_flower background_flower_sp_nav">
                     <p class="title">せりデザイン</p>
                     <img src="./Links/水引_半透明.svg" alt="">
                 </div>
@@ -409,6 +409,9 @@
                 text.split('').forEach(function (t, i) {
                     if (t !== " ") {
                         if (i < 10) {
+                            if (i == 6) {
+                                textbox += '<br class="sp_br">'
+                            }
                             textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
                         } else {
                             var n = i / 10;

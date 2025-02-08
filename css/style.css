@@ -1090,18 +1090,19 @@ h3 {
         z-index: 1;
     }
 
-    .background_flower_sp {
+    .background_flower_sp_nav {
         position: relative;
-        padding-bottom: 100px;
+        padding-top: 50px;
     }
     
     .sp_nav ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         height: 100%;
-        gap: 40px;
+        gap: 50px;
+        letter-spacing: 0.1em;
+        padding-top: 50px;
     }
     
     .sp_nav ul li {
@@ -1129,6 +1130,11 @@ h3 {
 
     #top .mizuhiki {
         width: 16%;
+    }
+
+    #top .mizuhiki div {
+        height: calc(100% - 65px);
+        bottom: 0;
     }
 
     .mizuhiki_works,
@@ -1275,13 +1281,51 @@ h3 {
     /* contact.html */
 
     /* works_LIFEhairdesign.html */
+
+    
+    .explain {
+        width: 90%;
+        margin: 0 auto;
+        gap: 5%;
+        padding-top: 70px;
+    }
+
+    .explain P {
+        font-size: 15px;
+    }
+
+    .explain img {
+        height: 180px;
+    }
+
+    .explain_wrap {
+        width: 400px;
+    }
+
+    .explain_label {
+        width: 20%;
+    }
+
+    .explain_text {
+        width: 98%;
+    }
+
+    /* それぞれの画像サイズ調整 */
+
+    .explain_picture {
+        display: block;
+    }
+
+    .mock-up_banner {
+        height: 280px;
+    }
 }
 
 /* 767px以下 */
 
 @media screen and (max-width: 767px) {
 
-    p {
+    main p {
         font-size: 14px;
     }
 
@@ -1370,8 +1414,9 @@ h3 {
     }
 
     .profile_contents {
-        display: block;
-        margin: 0 auto;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
     }
 
     .photo {
@@ -1588,6 +1633,7 @@ h3 {
         width: 80%;
         padding-top: 50px;
         padding-bottom: 80px;
+        text-align: center;
     }
 
     .motto_flower {
@@ -1597,7 +1643,8 @@ h3 {
     .motto_wrap p {
         width: 295px;
         margin: 0 auto;
-        padding-top: 30px;
+        padding-top: 50px;
+        text-align: left;
     }
 
     /* contact.html */
@@ -1626,4 +1673,71 @@ h3 {
     }
 
     /* works_LIFEhairdesign.html */
+
+    .works_title {
+        font-size: 16px;
+    }
+
+    .explain {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        width: 80%;
+        padding-top: 70px;
+    }
+
+    .explain P {
+        font-size: 14px;
+    }
+
+    .explain img {
+        height: 80%;
+        text-align: center;
+    }
+
+    .explain_wrap {
+        width: auto;
+        margin:0 auto;
+        padding-top: 50px;
+    }
+
+    .explain_label {
+        width: 90px;
+    }
+
+    /* .explain_detail {
+        width: auto;
+    } */
+
+    .explain_text {
+        width: auto;
+        padding-right: 2%;
+    }
+
+    .picture_pc {
+        width: 74%;
+        padding: 3%;
+        margin: 70px auto;
+    }
+
+     /* それぞれの画像サイズ調整 */
+
+     .picture_sp {
+        width: 70%;
+        padding: 3%;
+        margin: 70px auto;
+    }
+
+    .mock-up_banner {
+        height: 280px;
+    }
+
+    .picture_pop,
+    .picture_koukyuukann,
+    .picture_springsale,
+    .picture_trrrrip {
+        width: 74%;
+        padding: 3%;
+        margin: 70px auto;
+    }
 }
