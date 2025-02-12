@@ -7,9 +7,8 @@ body {
     background-blend-mode: soft-light;
 }
 
-/* Loading背景画面設定　*/
+/* Loading背景画面設定 */
 /* #splash {
-    fixedで全面に固定
       position: fixed;
       width: 100%;
       height: 100%;
@@ -123,6 +122,7 @@ header {
 #top .mizuhiki div {
     height: 0;
     animation: throughLine 2s forwards;
+    /* animation-delay: 2s; */
 }
 
 @keyframes throughLine {
