@@ -7,8 +7,10 @@
     
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/4-1-4.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./Links/ファビコン.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
@@ -23,15 +25,21 @@
       </script>
 </head>
 <body>
+    <!-- <div id="splash">
+        <div id="splash_logo"><img src="./Links/水引_花_ローディング赤.svg" alt="" class="fadeUp"></div>画像部分は適宜差し換えてください
+        /splash</div>
+        <div id="container">
+        <p>ローディング後、この画面が見えます。</p>
+        /container</div> -->
     <header class="header_top">
         <div class="header_wrap">
             <p class="logo"><a href="index.html#top">せりデザイン</a></p>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="index.html#works">制作事例</a></li>
-                    <li><a href="index.html#profile">わたしのこと</a></li>
-                    <li><a href="index.html#skill">できること</a></li>
-                    <li><a href="index.html#contact">お問い合わせ</a></li>
+                    <li class="line"><a href="index.html#works">制作事例</a></li>
+                    <li class="line"><a href="index.html#profile">わたしのこと</a></li>
+                    <li class="line"><a href="index.html#skill">できること</a></li>
+                    <li class="line"><a href="index.html#contact">お問い合わせ</a></li>
                 </ul>
             </nav>
             <div class="sp_btn">
@@ -39,7 +47,7 @@
             </div>
             <nav class="sp_nav">
                 <div class="background_flower background_flower_sp_nav">
-                    <p class="title">せりデザイン</p>
+                    <p class="title"><a href="index.html#top">せりデザイン</a></p>
                     <img src="./Links/水引_半透明.svg" alt="">
                 </div>
                 <ul>
@@ -112,7 +120,7 @@
 
                 <div class="slick_nav"></div>
                 <div class="button works_button">
-                    <p class="more"><a href="works.html">もっとみる</a></p>
+                    <p class="more letter-space"><a href="works.html">もっとみる</a></p>
                 </div>
             </div>
         </section>
@@ -137,7 +145,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <p class="more"><a href="profile.html">もっとみる</a></p>
+                    <p class="more letter-space"><a href="profile.html">もっとみる</a></p>
                 </div>
             </div>
         </section>
@@ -206,7 +214,7 @@
                                 <textarea type="text" placeholder="お問い合わせ内容を入力してください。" name="entry.839337160" required></textarea>
                             </div>
                             <button class="button" type="submit">
-                                <p class="more button_more">送信する</p>
+                                <p class="more button_more letter-space">送信する</p>
                             </button>
                         </form>
                     </div>
@@ -319,7 +327,6 @@
               </svg>
          </a>
     </footer>
-
     <script type="text/javascript">
         let submitted = false;
     </script>
@@ -332,10 +339,21 @@
 
     <script>
         $(function () {
+
+            // $(window).on('load',function(){
+            //  $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+            //  $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+            // });
+
             $('.sp_btn').on('click',function(){
                 $('.sp_btn').toggleClass('open');
-                $('.sp_nav').fadeToggle();
+                $('.sp_nav').toggleClass('panelactive');
             })
+
+            $(".sp_nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+            $(".sp_btn").removeClass('open');//ボタンの activeクラスを除去し
+            $(".sp_nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+        });
 
             $('.works_group').slick({
                 autoplay: true,
@@ -428,5 +446,8 @@
             EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
         });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
     </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXv
+    ZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/4-1-4.js"></script>
 </body>
 </html>

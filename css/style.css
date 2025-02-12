@@ -7,6 +7,51 @@ body {
     background-blend-mode: soft-light;
 }
 
+/* Loading背景画面設定　*/
+/* #splash {
+    fixedで全面に固定
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background:#fff8e8;
+      text-align:center;
+      color:#fffaf0;
+    } */
+    
+    /* Loading画像中央配置　*/
+    /* #splash_logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    } */
+
+    /* Loading アイコンの大きさ設定　*/
+    /* #splash_logo img {
+        width:150px;
+    } */
+  
+    /* fadeUpをするアイコンの動き */
+    /* .fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    } */
+  
+  /* @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }     */
+
 /* ヘッダー */
 
 header {
@@ -41,8 +86,17 @@ header {
 .pc_nav ul li {
     font-size: 14px;
     text-align: center;
+    text-decoration: none;
+    color: transparent;
+    background: linear-gradient(to right, #cc0000 50%, #3f2828 50%) 100%;
+    background-clip: text;
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
 }
 
+.pc_nav ul li:hover {
+    background-position: 0 100%;
+  }
 
 /* トップ */
 
@@ -64,6 +118,20 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#top .mizuhiki div {
+    height: 0;
+    animation: throughLine 2s forwards;
+}
+
+@keyframes throughLine {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
 }
 
 .mizuhiki span {
@@ -227,25 +295,35 @@ h1 {
 }
 
 .works_arrow_left {
-    width: 95px;
+    width: 50px;
     height: 7px;
     border-bottom: 1px solid #c8b284;
     border-left: 1px solid #c8b284;
     transform: translate(-100%, -50%) skew(125deg);
     position: absolute;
-    left: 0;
+    left: -7%;
     top: 50%;
 }
 
+.works_arrow_left:hover {
+    border-bottom: 2px solid #c8b284;
+    border-left: 2px solid #c8b284;
+}
+
 .works_arrow_right {
-    width: 95px;
+    width: 50px;
     height: 7px;
     border-bottom: 1px solid #c8b284;
     border-right: 1px solid #c8b284;
     transform: translateY(-50%) skew(-125deg);
     position: absolute;
-    left: 100%;
+    left: 107%;
     top: 50%;
+}
+
+.works_arrow_right:hover {
+    border-bottom: 2px solid #c8b284;
+    border-right: 2px solid #c8b284;
 }
 
 .button {
@@ -262,6 +340,10 @@ h1 {
     transition: 0.5s;
 }
 
+.more.letter-space:hover {
+    letter-spacing: 0.2em;
+  }
+
 .works_button {
     margin-top: 160px;
 }
@@ -272,6 +354,8 @@ h1 {
     font-size: 17px;
     letter-spacing: 0.1em;
     padding-top: 6px;
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 /* わたしのこと */
@@ -463,7 +547,17 @@ footer {
 .footer_pc_nav ul li {
     font-size: 14px;
     color: #fffaf0;
+    text-decoration: none;
+    color: transparent;
+    background: linear-gradient(to right, #e24242 50%, #fffaf0 50%) 100%;
+    background-clip: text;
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
 }
+
+.footer_pc_nav ul li:hover {
+    background-position: 0 100%;
+  }
 
 .footer_copy p {
     font-size: 13px;
@@ -482,6 +576,11 @@ footer {
 
 .return.in_footer {
     fill: #fffaf0;
+}
+
+.return:hover {
+    opacity: 0.6; 
+    transition: 0.5s;
 }
 
 /* スライダー 制作事例 */
@@ -1023,11 +1122,15 @@ h3 {
         height: 23px;
         cursor: pointer;
         /* 位置の調整 */
-        position: absolute;
+        position: fixed;
         top: 21px;
         right: 25px;
         /* 重なり具合 */
         z-index: 2;
+    }
+
+    .sp_nav.panelactive{
+        top: 0;
     }
 
     .sp_btn span {
@@ -1080,19 +1183,26 @@ h3 {
     /* メニューの見た目 */
 
     .sp_nav {
-        position: absolute;
-        top: 0;
+        position:fixed;
+        top:-120%;
         left: 0;
         width: 100%;
         height: 100vh;
         background: #fcf3e3;
         /* 重なり具合 */
         z-index: 1;
+        transition: all 0.6s;
+        display: block;
     }
 
     .background_flower_sp_nav {
         position: relative;
         padding-top: 50px;
+    } 
+
+    .sp_nav .title:hover {
+        opacity: 0.6; 
+        transition: 0.5s;
     }
     
     .sp_nav ul {
@@ -1108,7 +1218,17 @@ h3 {
     .sp_nav ul li {
         color: #3f2828;
         font-size: 14px;
+        text-decoration: none;
+        color: transparent;
+        background: linear-gradient(to right, #cc0000 50%, #3f2828 50%) 100%;
+        background-clip: text;
+        background-size: 200% 100%;
+        transition: background-position 0.5s;
     }
+
+    .sp_nav ul li:hover {
+        background-position: 0 100%;
+      }
 
     /* トップ */
 
@@ -1133,8 +1253,7 @@ h3 {
     }
 
     #top .mizuhiki div {
-        height: calc(100% - 65px);
-        bottom: 0;
+        top: 65px;
     }
 
     .mizuhiki_works,
@@ -1180,7 +1299,7 @@ h3 {
         margin: 0 auto;
       }
 
-      #skill {
+    #skill {
         height: 780px;
     }
     
@@ -1316,7 +1435,7 @@ h3 {
         display: block;
     }
 
-    .mock-up_banner {
+    .explain .mock-up_banner {
         height: 280px;
     }
 }
@@ -1696,7 +1815,7 @@ h3 {
     }
 
     .explain_wrap {
-        width: auto;
+        width: 90%;
         margin:0 auto;
         padding-top: 50px;
     }
@@ -1728,7 +1847,7 @@ h3 {
         margin: 70px auto;
     }
 
-    .mock-up_banner {
+    .explain .mock-up_banner {
         height: 280px;
     }
 
