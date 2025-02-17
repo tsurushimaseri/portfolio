@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background-image: url("../Links/背景.jpg");
+    background-image: url("../Links/background_img.jpg");
     background-repeat: repeat;
     background-color: rgba(255,250,240,0.6);
     background-blend-mode: soft-light;
